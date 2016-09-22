@@ -79,6 +79,9 @@
     <Compile Include="View\SniperList.xaml.cs">
       <DependentUpon>SniperList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PrimaryWeaponList.xaml.cs">
+      <DependentUpon>PrimaryWeaponList.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\ArmourList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SniperList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrimaryWeaponList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
