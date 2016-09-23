@@ -173,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logo-beztla.png" />
+    <Resource Include="Images\glowna_bron_tlo.png" />
+    <Resource Include="Images\gray_sand.png" />
+    <Resource Include="Images\gray_sand_%402X.png" />
     <Content Include="Sounds\mw2Theme.wav" />
   </ItemGroup>
   <ItemGroup>
