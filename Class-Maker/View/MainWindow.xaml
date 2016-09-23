@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Class_Maker"
         mc:Ignorable="d"
-        Title="Class Maker" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Class Maker" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Class-Maker;component/Images/kurwica.png"/>
+    </Window.Background>
+    <Button x:Name="button" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="button_Click" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
 </Window>

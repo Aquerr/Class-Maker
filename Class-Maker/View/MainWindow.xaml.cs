@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Class_Maker.View
 {
@@ -10,6 +13,12 @@ namespace Class_Maker.View
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
