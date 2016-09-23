@@ -4,6 +4,11 @@
     {
         public int LoadoutId { get; set; }
         public string Name { get; set; }
-        //TODO: More property have to be added here.
+        public Weapon Weapon { get; set; }
+        public Pistol Pistol { get; set; }
+        public OffensiveGranade OffensiveGranade{get;set;}
+        public TacticalGranade FirstTacticalGranade{get;set;}
+        public TacticalGranade SecondTacticalGranade { get; set; }
+        //public Armour Armour { get; set; }
     }
 }
