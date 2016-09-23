@@ -70,8 +70,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\Attachment.cs" />
+    <Compile Include="Entities\Granade.cs" />
     <Compile Include="Entities\Loadout.cs" />
+    <Compile Include="Entities\OffensiveGranade.cs" />
+    <Compile Include="Entities\Pistol.cs" />
     <Compile Include="Entities\Rifle.cs" />
+    <Compile Include="Entities\Skin.cs" />
+    <Compile Include="Entities\TacticalGranade.cs" />
+    <Compile Include="Entities\Weapon.cs" />
+    <Compile Include="Entities\WeaponType.cs" />
     <Compile Include="View\LoadoutList.xaml.cs">
       <DependentUpon>LoadoutList.xaml</DependentUpon>
     </Compile>
