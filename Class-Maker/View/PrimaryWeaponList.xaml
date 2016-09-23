@@ -5,27 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Class_Maker.View"
         mc:Ignorable="d"
-        Title="Broń Główna" Height="720" Width="1280">
+        Title="Broń Główna" Height="720" Width="1280" ResizeMode="CanResizeWithGrip">
+    <Window.Background>
+        <ImageBrush ImageSource="/Class-Maker;component/Images/glowna_bron_tlo.png"/>
+    </Window.Background>
     <Grid>
-        <Button x:Name="btnassault" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY SZTURMOWE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,50,0,0" Height="37" BorderBrush="#00707070">
+        <Button x:Name="btnassault" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="281" Margin="910,56,0,0" Height="37" BorderBrush="#00707070"  Cursor="Hand">
+
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Foreground="snow">KARABINY SZTURMOWE</Label>
+                </ControlTemplate>
+            </Button.Template>
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnsmg" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY MASZYNOWE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,120,0,0" Height="37" BorderBrush="#00707070">
-            <Button.Background>
-                <SolidColorBrush Color="#00000000" Opacity="0"/>
-            </Button.Background>
+        <Button x:Name="btnsmg" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="281" Margin="910,124,0,0" Height="37" BorderBrush="#00707070" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Foreground="snow" >KARABINY MASZYNOWE</Label>
+                </ControlTemplate>
+            </Button.Template>
+
         </Button>
-        <Button x:Name="btnsniper" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY SNAJPERSKIE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,190,0,0" Height="37" BorderBrush="#00707070">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
-            </Button.Background>
+        <Button x:Name="btnsniper" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Content="KARABINY SNAJPERSKIE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="281" Margin="910,189,0,0" Height="37" BorderBrush="#00707070" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Foreground="snow">KARABINY SNAJPERSKIE</Label>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
-        <Button x:Name="btnshotgun" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="STRZELBY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="40,260,0,0" Height="37" BorderBrush="#00707070">
-            <Button.Background>
-                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
-            </Button.Background>
+        <Button x:Name="btnshotgun" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Content="STRZELBY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="910,265,0,0" Height="37" BorderBrush="#00707070" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Foreground="Snow">STRZELBY</Label>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnriot" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="22" Content="STRZELBY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="910,338,0,0" Height="37" BorderBrush="#00707070" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Foreground="snow" Content="RIOT"/>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
 
     </Grid>
