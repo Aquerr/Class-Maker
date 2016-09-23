@@ -1,0 +1,32 @@
+﻿<Window x:Class="Class_Maker.View.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Class_Maker.View"
+        mc:Ignorable="d"
+        Title="Broń Główna" Height="720" Width="1280">
+    <Grid>
+        <Button x:Name="btnassault" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY SZTURMOWE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,50,0,0" Height="37" BorderBrush="#00707070">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnsmg" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY MASZYNOWE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,120,0,0" Height="37" BorderBrush="#00707070">
+            <Button.Background>
+                <SolidColorBrush Color="#00000000" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnsniper" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="KARABINY SNAJPERSKIE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="40,190,0,0" Height="37" BorderBrush="#00707070">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnshotgun" HorizontalContentAlignment="Left" FontWeight="Bold" FontSize="20" Content="STRZELBY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="40,260,0,0" Height="37" BorderBrush="#00707070">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
