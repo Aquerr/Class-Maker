@@ -7,13 +7,182 @@
         mc:Ignorable="d"
         Title="Class Maker" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Window.Resources>
-        
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="NaN"/>
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="Height" Value="NaN"/>
+            <Setter Property="MinHeight" Value="30"/>
+            <Setter Property="Padding" Value="4,4,4,4"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextElement.Foreground">
+                <Setter.Value>
+                    <SolidColorBrush>#FF7C4400</SolidColorBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="TextElement.FontSize" Value="12"/>
+            <Setter Property="TextElement.FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="#00FFFFFF">
+                            <Border BorderBrush="#FF000000" BorderThickness="1,1,0,0" Opacity="0.9">
+                                <Border.BitmapEffect>
+                                    <BlurBitmapEffect Radius="1" />
+                                </Border.BitmapEffect>
+                            </Border>
+                            <Border BorderBrush="#FFFFFFFF" BorderThickness="0,0,0.6,0.6" Opacity="0.7" />
+                            <Border Margin="1,1,1,1" Name="background">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <LinearGradientBrush.GradientStops>
+                                            <!--Kolor poczatkowy-->
+                                            <GradientStop Offset="0" Color="Transparent" />
+                                            <GradientStop Offset="1" Color="Transparent" />
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Grid Margin="1,1,1,1" ClipToBounds="True">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Ellipse Margin="10,3,10,3" Width="{TemplateBinding FrameworkElement.Width}" Fill="#FFFFFFFF" Opacity="0.3" Grid.Row="0" Grid.RowSpan="2">
+                                        <Ellipse.BitmapEffect>
+                                            <BlurBitmapEffect />
+                                        </Ellipse.BitmapEffect>
+                                    </Ellipse>
+                                    <Ellipse Width="{TemplateBinding FrameworkElement.Width}" Fill="#FFFFFFFF" Opacity="0.34" Grid.Row="0" />
+                                </Grid>
+                            </Border>
+                            <Border Margin="1,1,1,1" BorderBrush="#FFFFFFFF" BorderThickness="5,5,0,0" Opacity="0.3">
+                                <Border.BitmapEffect>
+                                    <BlurBitmapEffect Radius="1" />
+                                </Border.BitmapEffect>
+                            </Border>
+                            <Border Margin="1,1,1,1" BorderBrush="#FF000000" BorderThickness="0,0,0.6,0.6" Opacity="1">
+                                <Border.BitmapEffect>
+                                    <BlurBitmapEffect Radius="1" />
+                                </Border.BitmapEffect>
+                            </Border>
+                            <ContentPresenter Margin="{TemplateBinding Control.Padding}" HorizontalAlignment="Center" VerticalAlignment="Center" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" Content="{TemplateBinding ContentControl.Content}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <Storyboard.Children>
+                                                <!--Kolor po odejachniu myszka-->
+                                                <ColorAnimation To="Transparent" FillBehavior="HoldEnd" Duration="00:00:00.2000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[0].(GradientStop.Color)" />
+                                                <ColorAnimation To="Transparent" FillBehavior="HoldEnd" Duration="00:00:00.2000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[1].(GradientStop.Color)" />
+                                            </Storyboard.Children>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <Storyboard.Children>
+                                                <!--Kolor po najechaniu myszka-->
+                                                <ColorAnimation To="Transparent" FillBehavior="HoldEnd" Duration="00:00:00.1000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[0].(GradientStop.Color)" />
+                                                <ColorAnimation To="YellowGreen" FillBehavior="HoldEnd" Duration="00:00:00.1000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[1].(GradientStop.Color)" />
+                                            </Storyboard.Children>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="ButtonBase.IsPressed" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <Storyboard.Children>
+                                                <!--Kolor po nacisnieciu-->
+                                                <ColorAnimation To="#FFFAF688" FillBehavior="Stop" Duration="00:00:00.4000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[0].(GradientStop.Color)" />
+                                                <ColorAnimation To="#FFF6D415" FillBehavior="Stop" Duration="00:00:00.4000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[1].(GradientStop.Color)" />
+                                            </Storyboard.Children>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <Storyboard.Children>
+                                                <!--Kolor kolor w trakcie nacisniecia-->
+                                                <ColorAnimation To="Transparent" FillBehavior="HoldEnd" Duration="00:00:00.2000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[0].(GradientStop.Color)" />
+                                                <ColorAnimation To="YellowGreen" FillBehavior="HoldEnd" Duration="00:00:00.2000000" Storyboard.TargetName="background" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops).[1].(GradientStop.Color)" />
+                                            </Storyboard.Children>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Border" x:Key="expand">
+            <Setter Property="Width" Value="600">
+            </Setter>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <!--<DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" From="0" Duration="0:0:1"></DoubleAnimation>-->
+                                <DoubleAnimation Storyboard.TargetProperty="Width" From="100" Duration="0:0:1"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
     </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="/Class-Maker;component/Images/MainBackground.png"/>
     </Window.Background>
     <Grid x:Name="LayoutRoot">
-        <Button x:Name="BtnClose" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="Close" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Width="600" Grid.Column="0" Grid.Row="0" Height="600" HorizontalAlignment="Left" Margin="0 20 0 0">
+
+            <Button Content="Klasy" FontSize="50" Style="{StaticResource MenuButtonStyle}"></Button>
+
+            <Border BorderThickness="2" BorderBrush="Black" Height="100" Style="{StaticResource expand}">
+                <Label Content="YOLO" FontSize="50" HorizontalContentAlignment="Center"></Label>
+            </Border>
+
+            <!--<Button>
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border BorderBrush="Black" BorderThickness="1">
+                            <Label Content="Klasy" FontSize="50" FontFamily="Arial" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+
+                </Button.Template>
+            </Button>-->
+
+        </StackPanel>
+
+        <Button x:Name="BtnClose" Grid.Row="2" Grid.Column="2" Content="Wyjdź" HorizontalAlignment="Right" VerticalAlignment="Top" Width="171" Height="94" Click="Close" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
 
         <!--<MediaElement x:Name="MyMediaElement" Visibility="Hidden" LoadedBehavior="Manual" UnloadedBehavior="Manual">
         </MediaElement>-->
