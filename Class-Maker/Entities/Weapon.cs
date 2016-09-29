@@ -10,6 +10,7 @@
         public string Damage { get; set; }
         public int Range { get; set; }
         public int FireRate { get; set; }
+        public int ReloadSpeed { get; set; }
         public int Mobility { get; set; }
     }
 }
