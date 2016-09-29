@@ -176,10 +176,14 @@
     <Resource Include="Images\glowna_bron_tlo.png" />
     <Resource Include="Images\gray_sand.png" />
     <Resource Include="Images\gray_sand_%402X.png" />
-    <Content Include="Sounds\mw2Theme.wav" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\kurwica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sounds\mw2Theme.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

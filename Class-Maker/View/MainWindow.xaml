@@ -6,8 +6,16 @@
         xmlns:local="clr-namespace:Class_Maker"
         mc:Ignorable="d"
         Title="Class Maker" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
+    <Window.Resources>
+        
+    </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="/Class-Maker;component/Images/kurwica.png"/>
     </Window.Background>
-    <Button x:Name="button" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="button_Click" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
+    <Grid x:Name="LayoutRoot">
+        <Button x:Name="btnClose" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="Close" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
+
+        <!--<MediaElement x:Name="MyMediaElement" Visibility="Hidden" LoadedBehavior="Manual" UnloadedBehavior="Manual">
+        </MediaElement>-->
+    </Grid>
 </Window>
