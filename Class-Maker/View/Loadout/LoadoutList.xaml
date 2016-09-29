@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="Class Maker" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Width="400">
+            <ListBox.Template>
+                <ControlTemplate>
+                    <Label Content="Klasa" HorizontalContentAlignment="Center" FontSize="50" FontFamily="Arial"/>
+                </ControlTemplate>
+            </ListBox.Template>
+            <DataTemplate>
+            </DataTemplate>
+        </ListBox>
     </Grid>
 </Window>
