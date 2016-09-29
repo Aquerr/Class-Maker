@@ -178,7 +178,7 @@
     <Resource Include="Images\gray_sand_%402X.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\kurwica.png" />
+    <Resource Include="Images\MainBackground.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sounds\mw2Theme.wav">

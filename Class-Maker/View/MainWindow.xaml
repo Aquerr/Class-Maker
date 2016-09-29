@@ -10,10 +10,10 @@
         
     </Window.Resources>
     <Window.Background>
-        <ImageBrush ImageSource="/Class-Maker;component/Images/kurwica.png"/>
+        <ImageBrush ImageSource="/Class-Maker;component/Images/MainBackground.png"/>
     </Window.Background>
     <Grid x:Name="LayoutRoot">
-        <Button x:Name="btnClose" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="Close" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
+        <Button x:Name="BtnClose" Content="Wyjdź" HorizontalAlignment="Left" Margin="1726,958,0,0" VerticalAlignment="Top" Width="171" Height="94" Click="Close" FontFamily="Verdana" FontSize="40" Background="#FF2CAC3D"/>
 
         <!--<MediaElement x:Name="MyMediaElement" Visibility="Hidden" LoadedBehavior="Manual" UnloadedBehavior="Manual">
         </MediaElement>-->
