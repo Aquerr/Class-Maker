@@ -84,7 +84,7 @@
     <Compile Include="Entities\TacticalGranade.cs" />
     <Compile Include="Entities\Weapon.cs" />
     <Compile Include="Entities\WeaponType.cs" />
-    <Compile Include="View\LoadoutList.xaml.cs">
+    <Compile Include="View\Loadout\LoadoutList.xaml.cs">
       <DependentUpon>LoadoutList.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RifleList.xaml.cs">
@@ -100,9 +100,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\LoadoutList.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\Loadout\LoadoutList.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
